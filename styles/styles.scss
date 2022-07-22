@@ -1,0 +1,130 @@
+$large : 3.2rem;
+$medium : 2rem;
+$small : 1.6rem;
+$main-font:'Albert Sans', sans-serif;
+$main-color: #14213D;
+$secondary-color: #FCA311;
+$shadow-color: #a5a5a5;
+$light-color: #fff;
+$dark-color: #000;
+
+@mixin button {
+    padding: 1rem;
+    margin: 0;
+    font-size: $small;
+    font-family: $main-font;
+    outline: none;
+    cursor: pointer;
+}
+@mixin input {
+    font-family: $main-font;
+    outline: none;
+    cursor: text;
+}
+@mixin card {
+    padding: 3.2rem 1.6rem;
+    margin: 3rem 0;
+    border: 1px solid $main-color;
+    box-shadow: 10px 10px 0px $main-color;
+}
+
+.main-button:not(:disabled){
+    @include button;
+    background-color: $main-color;
+    color: $light-color;
+    border: 1px solid $main-color;
+    &:hover{
+        background-color: $light-color;
+        color: $main-color;
+    }
+}
+.secondary-button{
+    @include button;
+    color: $shadow-color;
+    background-color: $light-color;
+    border: 1px solid $shadow-color;
+    &:hover:not(:disabled){
+        background-color: $shadow-color;
+        color: $light-color;
+    }
+}
+button:disabled {
+    background-color: rgb(223, 223, 223);
+    color: $shadow-color;
+    border: none;
+    cursor: not-allowed !important;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1080px;
+
+    &__title {
+        font-size: $large;
+        font-family: $main-font;
+        margin: 2rem auto;
+        color: $secondary-color;
+    }
+    .add__container {
+
+        padding: 3rem;
+
+        .add__input {
+            display: flex;
+            justify-content: center;
+            input, button{
+                padding: 1rem;
+                margin: 0;
+                font-size: $small;
+                border: 1px solid $secondary-color;
+            }
+            input {
+                border-right: none;
+                @include input;
+            }
+            button {
+                background-color: $secondary-color;
+                color: $light-color;
+                border-left: none;
+                @include button;
+            }
+        }
+    }
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+    font-family: $main-font;
+    width: 100%;
+    margin: 2rem auto;
+    .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $shadow-color;
+        width: 100%;
+        @include card;
+        p{
+            font-size: $medium
+        }
+        button {
+            
+            @include button;
+            margin: 0 .2rem;
+        }
+    }
+}

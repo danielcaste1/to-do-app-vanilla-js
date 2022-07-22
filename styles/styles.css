@@ -1,0 +1,161 @@
+.main-button:not(:disabled) {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Albert Sans", sans-serif;
+  outline: none;
+  cursor: pointer;
+  background-color: #14213D;
+  color: #fff;
+  border: 1px solid #14213D;
+}
+
+.main-button:not(:disabled):hover {
+  background-color: #fff;
+  color: #14213D;
+}
+
+.secondary-button {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Albert Sans", sans-serif;
+  outline: none;
+  cursor: pointer;
+  color: #a5a5a5;
+  background-color: #fff;
+  border: 1px solid #a5a5a5;
+}
+
+.secondary-button:hover:not(:disabled) {
+  background-color: #a5a5a5;
+  color: #fff;
+}
+
+button:disabled {
+  background-color: #dfdfdf;
+  color: #a5a5a5;
+  border: none;
+  cursor: not-allowed !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.app__title {
+  font-size: 3.2rem;
+  font-family: "Albert Sans", sans-serif;
+  margin: 2rem auto;
+  color: #FCA311;
+}
+
+.app .add__container {
+  padding: 3rem;
+}
+
+.app .add__container .add__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .add__container .add__input input, .app .add__container .add__input button {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.6rem;
+  border: 1px solid #FCA311;
+}
+
+.app .add__container .add__input input {
+  border-right: none;
+  font-family: "Albert Sans", sans-serif;
+  outline: none;
+  cursor: text;
+}
+
+.app .add__container .add__input button {
+  background-color: #FCA311;
+  color: #fff;
+  border-left: none;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Albert Sans", sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Albert Sans", sans-serif;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.tasks .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a5a5a5;
+  width: 100%;
+  padding: 3.2rem 1.6rem;
+  margin: 3rem 0;
+  border: 1px solid #14213D;
+  -webkit-box-shadow: 10px 10px 0px #14213D;
+          box-shadow: 10px 10px 0px #14213D;
+}
+
+.tasks .task p {
+  font-size: 2rem;
+}
+
+.tasks .task button {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Albert Sans", sans-serif;
+  outline: none;
+  cursor: pointer;
+  margin: 0 .2rem;
+}
